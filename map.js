@@ -22,9 +22,9 @@ const assertArraysEqual = function(array1, array2) {
 
 const words = ["ground", "control", "to", "major", "tom"];
 const map = function(array, callback) {
-  const results = [];
-  for (let item of array) {
-    results.push(callback(item));
+  const results = [];                     //assigning variable to new array
+  for (let item of array) {               //loop through each string in the array
+    results.push(callback(item));         //push the value of item to results from callback fn. in this case callback is referencing 0 index of each word
   }
   return results;
 };

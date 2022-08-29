@@ -22,9 +22,9 @@ const assertArraysEqual = function(array1, array2) {
 
 
 const takeUntil = function(array, callback) {
-  let newArray = [];
-  for (element of array) {
-    if (!callback(element)) {
+  let newArray = [];          //assigning new array
+  for (element of array) {    //loop through each element of array
+    if (!callback(element)) { //if callback fn is not applicable, then push the element to the new array
       newArray.push(element);
     } else {
       break;

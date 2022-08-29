@@ -24,5 +24,7 @@ const without = function(source, itemsToRemove) {
     if (itemsToRemove.includes(source[i])){
       newArray.push(source[i])
     }
-    }return newArray
+    } return newArray
   } 
+  console.log(without([1, 2, 3], [1])) // => [2, 3]
+  console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]

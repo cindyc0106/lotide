@@ -21,17 +21,17 @@ const assertArraysEqual = function(array1, array2) {
 
 
 const letterPositions = function(sentence) {
-  const results = {};
+  const results = {};       //assigning variable result to empty object
 
-  for (let i = 0; i < sentence.length; i++) {
-    if (sentence.charAt(i) !== " ") {
-      if (results[sentence.charAt(i)]) {
-        results[sentence.charAt(i)].push(i);
+  for (let i = 0; i < sentence.length; i++) {     //looping through each character of sentence
+    if (sentence.charAt(i) !== " ") {             //charAt(i) references the letter at that index; if character is not a space
+      if (results[sentence.charAt(i)]) {          
+        results[sentence.charAt(i)].push(i);      //if the letter is the same, add the index to results
       } else {
-        results[sentence.charAt(i)] = [i];
+        results[sentence.charAt(i)] = [i];        //or else just print index
       }
     }
-  }
+  } 
   return results;
 };
 
